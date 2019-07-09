@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 
-import {
-  Anim,
+import { 
   Appear,
   BlockQuote,
-  Cite,
-  CodePane,
-  ComponentPlayground,
+  Cite, 
   Deck,
   Fill,
   Heading,
@@ -15,8 +12,7 @@ import {
   Link,
   ListItem,
   List,
-  Markdown,
-  MarkdownSlides,
+  Markdown,  
   Notes,
   Quote,
   Slide,
@@ -27,12 +23,11 @@ import {
   TableItem,
   TableRow,
   Table,
-  Text,
-  GoToAction
+  Text  
 } from '../../src';
 import preloader from '../../src/utils/preloader';
 import createTheme from '../../src/themes/default';
-import Interactive from '../assets/interactive';
+
 
 require('normalize.css');
 
@@ -40,6 +35,10 @@ const images = {
   city: require('../assets/pv.png'),
   kat: require('../assets/kat.gif'),
   logo: require('../assets/tenkuru.png'),
+  hun1: require('../assets/hun1.png'),
+  hun2: require('../assets/hun2.png'),
+  hun3: require('../assets/hun3.png'),
+  hun4: require('../assets/hun4.png'),
   markdown: require('../assets/racoon.gif')
 };
 
@@ -74,27 +73,31 @@ export default class Presentation extends Component {
         transitionDuration={500}
       >
         <Slide transition={['zoom']} bgColor="primary">
-          <Heading size={1} fit caps lineHeight={1} textColor="black">
-            Portafolio
+          <Heading size={1} fit caps lineHeight={1} >
+            TO Data Network
           </Heading>
-          <Heading size={1} fit caps>
-            Kevin Alejandro Vanegas
+          <Heading size={1} fit caps textColor="black">
+          Sara  Suárez, Jhonny  González , Nicolas Velásquez,  Daniel Muñoz , Kevin  Vanegas.
           </Heading>
-          <Heading size={6} fit caps textColor="black">
-            2019-1
-          </Heading>
-          <Link href="/https://gitlab.com/kigam">
+          
+          <Link href="https://github.com/to-data-network/to-data-network">
             <Text bold caps textColor="tertiary">
-              Miralo en mi Git
+              Miralo en Git
             </Text>
           </Link>
           </Slide>
           <Slide transition={['slide']} bgColor="black">
           <BlockQuote>
-            <Quote>Del ahogado al sombrero</Quote>
-            <Cite>Popular</Cite>
+            <Quote>Ya no estamos en la era de la información. Estamos en la era de la gestión de la información.”</Quote>
+            <Cite>Chris Hardwick, actor.</Cite>
           </BlockQuote>
         </Slide>
+        <Slide maxHeight="30%" bgImage={images.hun3}>
+        <Heading size={2} caps fit textColor="primary" textFont="primary">
+          HOSPITAL UNIVERSITARIO NACIONAL DE COLOMBIA
+          </Heading>
+</Slide>
+
         <Slide
           onActive={slideIndex => {
             console.info(`Viewing slide index: ${slideIndex}.`); // eslint-disable-line no-console
@@ -116,9 +119,9 @@ export default class Presentation extends Component {
           ]}
           bgColor="black"
         >
-          <Image src={images.kat.replace('/', '')} margin="0px auto 40px" />
+          <Image src={images.hun2.replace('/', '')} margin="0px auto 40px" />
           <Heading size={2} caps fit textColor="primary" textFont="primary">
-          ¿Espera? ¿Qué? 
+          HOSPITAL UNIVERSITARIO NACIONAL DE COLOMBIA
           </Heading>
           <Notes>
             You can even put notes on your slide. How awesome is that?
@@ -163,45 +166,7 @@ export default class Presentation extends Component {
           <Heading size={6} textColor="tertiary">
           En el Tenkuru desarrollamos grandes ideas con nuevas tecnologias, nos reunimos para charlar trabajar e intercambiar experiencias sobre programación, diseño, marketing, emprendimiento y trabajos en multimedia. 
           </Heading>
-          <Table>
-              <TableHeader>
-                <TableRow>
-                  
-                  <TableHeaderItem>Equipo actual</TableHeaderItem>
-                  <TableHeaderItem>Colaboraciones</TableHeaderItem>
-               </TableRow>
-              </TableHeader>
-              <TableBody>
-                <TableRow>
-                  <TableItem>kavanegasm</TableItem>
-                  <TableItem>ART980s</TableItem>
-                </TableRow>
-                <TableRow>
-                  <TableItem>Ailiria</TableItem>
-                  <TableItem>Ononoki™</TableItem>
-                </TableRow>
-                <TableRow>
-                  <TableItem>Sukuri</TableItem>
-                  <TableItem>sdbs</TableItem>
-                </TableRow>
-                <TableRow>
-                  <TableItem>Xideaxi</TableItem>
-                  <TableItem>Veldrod</TableItem>
-                </TableRow>
-                <TableRow>
-                  <TableItem>Kaori</TableItem>
-                  <TableItem>kg-scrip</TableItem>
-                </TableRow>
-                <TableRow>
-                  <TableItem></TableItem>
-                  <TableItem>めさば</TableItem>
-                </TableRow>
-                <TableRow>
-                  <TableItem></TableItem>
-                  <TableItem>frankcjen</TableItem>
-                </TableRow>
-              </TableBody>
-            </Table>
+        
         </Slide>
           <Slide transition={['spin', 'slide']} bgColor="tertiary">
           <Heading size={1} caps fit lineHeight={1.5} textColor="primary">
