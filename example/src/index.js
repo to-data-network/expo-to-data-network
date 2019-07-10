@@ -35,12 +35,20 @@ const images = {
   city: require('../assets/pv.png'),
   kat: require('../assets/kat.gif'),
   logo: require('../assets/tenkuru.png'),
+  app0: require('../assets/app0.png'),
+  app1: require('../assets/app.png'),
+  app2: require('../assets/app2.png'),
+  app3: require('../assets/app3.png'),
+  app4: require('../assets/app4.png'),
+  hun0: require('../assets/hun0.png'),
   hun1: require('../assets/hun1.png'),
   hun2: require('../assets/hun2.png'),
   hun3: require('../assets/hun3.png'),
   hun4: require('../assets/hun4.png'),
   hun5: require('../assets/hun5.png'),
   hun6: require('../assets/hun6.png'),
+  hun7: require('../assets/hun7.png'),
+  hun8: require('../assets/hun8.png'),
   markdown: require('../assets/racoon.gif')
 };
 
@@ -76,9 +84,8 @@ export default class Presentation extends Component {
         
       >
         <Slide transition={['zoom']} bgColor="primary">
-          <Heading size={1} fit caps lineHeight={1} >
-            TO Data Network
-          </Heading>
+          
+          <Image width="80%" src={images.hun0} />
           <Heading size={1} fit caps textColor="black">
           Sara  Suárez, Jhonny  González , Nicolas Velásquez,  Daniel Muñoz , Kevin  Vanegas.
           </Heading>
@@ -95,6 +102,16 @@ export default class Presentation extends Component {
             <Quote>Ya no estamos en la era de la información. Estamos en la era de la gestión de la información.”</Quote>
             <Cite>Chris Hardwick, actor.</Cite>
           </BlockQuote>
+        </Slide>
+
+        <Slide>
+          <Heading size={2} textColor="secondary" margin="0.25em">
+          ¿Qué es terapia ocupacional?
+          </Heading>
+          <Heading size={6} textColor="tertiary">
+          Es una rama de la medicina que busca mejorar la calidad de vida de las personas 
+          </Heading>
+          <Image width="80%" src={images.hun5} />
         </Slide>
 
         <Slide  bgColor="white">
@@ -125,26 +142,53 @@ export default class Presentation extends Component {
           ]}
           bgColor="black"
         >
-          <Image src={images.hun2.replace('/', '')} margin="0px auto 40px" />
+          <Image width="80%"  src={images.hun7.replace('/', '')} margin="0px auto 40px" />
           <Heading size={2} caps fit textColor="primary" textFont="primary">
-          HOSPITAL UNIVERSITARIO NACIONAL DE COLOMBIA
+          HUN - Terapia Ocupacional
           </Heading>
           <Notes>
             You can even put notes on your slide. How awesome is that?
           </Notes>
         </Slide>
-        <Slide>
-          <Heading size={2} textColor="secondary" margin="0.25em">
-          ¿Qué es terapia ocupacional?
-          </Heading>
-          <Heading size={6} textColor="tertiary">
-          Es una rama de la medicina que busca mejorar la calidad de vida de las personas 
-          </Heading>
-          <Image width="80%" src={images.hun5} />
-        </Slide>
+
         <Slide transition={['zoom', 'fade']} bgColor="primary">
           <Heading caps fit>
-          
+            HUN - Terapia ocupacional
+          </Heading>
+          <Layout>
+            <Fill>
+              <Heading
+                size={4}
+                caps
+                textColor="secondary"
+                bgColor="white"
+                margin={10}
+              >
+                 3 terapeutas ocupacionales y 12 estudiantes 
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading
+                size={4}
+                caps
+                textColor="secondary"
+                bgColor="white"
+                margin={10}
+              >
+                Atienden aproximadamente 40-60 pacientes, por semana
+              </Heading>
+            </Fill>
+          </Layout>
+          <Notes>
+            Use <code>layout</code> to <code>fill</code> or <code>fit</code>{' '}
+            your content
+          </Notes>
+          </Slide>
+
+      
+        <Slide transition={['zoom', 'fade']} bgColor="primary">
+          <Heading caps fit>
+          El terapeuta ocupacional recoge en su labor diaria datos sobre todos sus pacientes
 
           </Heading>
           <Layout>
@@ -167,7 +211,7 @@ export default class Presentation extends Component {
                 bgColor="white"
                 margin={10}
               >
-                continuar aprendiendo diversas cosas en diferentes areas
+                <Image width="87%" src={images.hun8} /> 
               </Heading>
             </Fill>
           </Layout>
@@ -178,7 +222,68 @@ export default class Presentation extends Component {
         </Slide>
         
        
-
+        <Slide transition={['zoom', 'fade']} bgColor="primary">
+          <Heading caps fit>
+          Solución planteada
+          </Heading>
+          <Layout>
+            <Fill>
+              <Heading
+                size={4}
+                caps
+                textColor="secondary"
+                bgColor="white"
+                margin={10}
+              >
+              <Image width="100%" src={images.app1} /> 
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading
+                size={4}
+                caps
+                textColor="secondary"
+                bgColor="white"
+                margin={10}
+              >
+                <Image width="77%" src={images.app2} /> 
+              </Heading>
+            </Fill>
+          </Layout>
+          <Layout>
+            <Fill>
+              <Heading
+                size={4}
+                caps
+                textColor="secondary"
+                bgColor="white"
+                margin={10}
+              >
+              <Image width="100%" src={images.app3} /> 
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading
+                size={4}
+                caps
+                textColor="secondary"
+                bgColor="white"
+                margin={10}
+              >
+                <Image width="87%" src={images.app4} /> 
+              </Heading>
+            </Fill>
+          </Layout>
+          <Notes>
+            Use <code>layout</code> to <code>fill</code> or <code>fit</code>{' '}
+            your content
+          </Notes>
+        </Slide>
+        <Slide bgDarken=".2" bgSize="60%" bgImage={images.app0}>
+        <Heading caps fit>
+          Financiamiento
+          </Heading>
+         </Slide>   
        
         
       </Deck>
