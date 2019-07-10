@@ -50,6 +50,7 @@ const images = {
   hun6: require('../assets/hun6.png'),
   hun7: require('../assets/hun7.png'),
   hun8: require('../assets/hun8.png'),
+  tonombres: require('../assets/to-nombres.png'),
   markdown: require('../assets/racoon.gif')
 };
 
@@ -380,9 +381,7 @@ export default class Presentation extends Component {
           </Layout>
        </Slide>
        <Slide>
-       <Heading size={1} fit caps textColor="white">
-          Sara  Suárez, Jhonny  González , Nicolas Velásquez,  Daniel Muñoz , Kevin  Vanegas.
-          </Heading>
+       <Image width="100%" src={images.tonombres} /> 
        </Slide>
       </Deck>
     );
