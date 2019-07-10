@@ -32,14 +32,15 @@ import createTheme from '../../src/themes/default';
 require('normalize.css');
 
 const images = {
-  city: require('../assets/pv.png'),
-  kat: require('../assets/kat.gif'),
   logo: require('../assets/tenkuru.png'),
+  qr: require('../assets/qrcode.png'),
   app0: require('../assets/app0.png'),
   app1: require('../assets/app.png'),
   app2: require('../assets/app2.png'),
   app3: require('../assets/app3.png'),
   app4: require('../assets/app4.png'),
+  app5: require('../assets/app1.gif'),
+  app6: require('../assets/app2.gif'),
   hun0: require('../assets/hun0.png'),
   hun1: require('../assets/hun1.png'),
   hun2: require('../assets/hun2.png'),
@@ -85,17 +86,15 @@ export default class Presentation extends Component {
       >
         <Slide transition={['zoom']} bgColor="primary">
           
-          <Image width="80%" src={images.hun0} />
-          <Heading size={1} fit caps textColor="black">
-          Sara  Suárez, Jhonny  González , Nicolas Velásquez,  Daniel Muñoz , Kevin  Vanegas.
-          </Heading>
+        <Image width="80%" src={images.hun0} />
+          
           
           <Link href="https://github.com/to-data-network/to-data-network">
             <Text bold caps textColor="tertiary">
-              Miralo en Git
+              Miralo en Git y QR
             </Text>
           </Link>
-
+          <Image width="30%" src={images.qr} />
           </Slide>
           <Slide  transition={['slide']} bgColor="black">
           <BlockQuote>
@@ -279,13 +278,112 @@ export default class Presentation extends Component {
             your content
           </Notes>
         </Slide>
+
+          <Slide>
+          <Text bold caps textColor="tertiary">
+              Preview
+            </Text>
+          <Image width="100%" src={images.app5} /> 
+          </Slide>
+          <Slide>
+          <Text bold caps textColor="tertiary">
+              Preview
+            </Text>
+          <Image width="100%" src={images.app6} /> 
+          </Slide>
+
         <Slide bgDarken=".2" bgSize="60%" bgImage={images.app0}>
         <Heading caps fit>
           Financiamiento
           </Heading>
          </Slide>   
-       
+       <Slide>
+       <Heading size={6} textColor="tertiary" margin="0.25em" bgColor="black">
+          $$$
+          </Heading>
+          <Heading size={6} textColor="Terciary">
+          Desarrollo incremental
+          </Heading>
+          <Layout>
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHeaderItem />
+                  <TableHeaderItem>2019</TableHeaderItem>
+                  <TableHeaderItem>2020</TableHeaderItem>
+                  <TableHeaderItem>2021 </TableHeaderItem>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                <TableRow>
+                  <TableItem>-Identificar requerimientos y funcionalidades</TableItem>
+                  <TableItem>15 milones</TableItem>
+                  <TableItem></TableItem>
+                  <TableItem></TableItem>
+                </TableRow>
+                <TableRow>
+                  <TableItem>-Diseño de arquitectura</TableItem>
+                  <TableItem>3 millones</TableItem>
+                  <TableItem>1 millon</TableItem>
+                  <TableItem>1 millon</TableItem>
+                </TableRow>
+                <TableRow>
+                  <TableItem>-Desarrollo beta aplicación</TableItem>
+                  <TableItem>10 millones</TableItem>
+                  <TableItem>12 millones</TableItem>
+                  <TableItem>2 millones</TableItem>
+                </TableRow>
+                <TableRow>
+                  <TableItem>-Validación</TableItem>
+                  <TableItem>3 millones</TableItem>
+                  <TableItem>3 millones</TableItem>
+                  <TableItem>3 millones</TableItem>
+                </TableRow>
+              </TableBody>
+            </Table>
+          </Layout>
+       </Slide>
         
+       <Slide>
+       <Heading size={6} textColor="primary" margin="0.25em" bgColor="black">
+          $$$
+          </Heading>
+          <Heading size={6} textColor="terciary">
+          Operación
+          </Heading>
+          <Layout>
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHeaderItem />
+                  <TableHeaderItem>2019</TableHeaderItem>
+                  <TableHeaderItem>2020</TableHeaderItem>
+                  <TableHeaderItem>2021 </TableHeaderItem>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                <TableRow>
+                  <TableItem>-Base de datos</TableItem>
+                  <TableItem>36 milones</TableItem>
+                  <TableItem>36 milones</TableItem>
+                  <TableItem>36 milones</TableItem>
+                </TableRow>
+                <TableRow>
+                  <TableItem>-Mantenimiento</TableItem>
+                  <TableItem>5 millones</TableItem>
+                  <TableItem>3 millones</TableItem>
+                  <TableItem>3 millones</TableItem>
+                </TableRow>
+                
+              </TableBody>
+            </Table>
+          </Layout>
+       </Slide>
+       <Slide>
+       <Heading size={1} fit caps textColor="white">
+          Sara  Suárez, Jhonny  González , Nicolas Velásquez,  Daniel Muñoz , Kevin  Vanegas.
+          </Heading>
+       </Slide>
       </Deck>
     );
   }
