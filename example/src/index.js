@@ -90,9 +90,9 @@ export default class Presentation extends Component {
         <Image width="80%" src={images.hun0} />
           
           
-          <Link href="https://github.com/to-data-network/to-data-network">
+          <Link href="https://hceun.com">
             <Text bold caps textColor="tertiary">
-              Miralo en Git y QR
+              Mira la presentación en tu dispositivo
             </Text>
           </Link>
           <Image width="30%" src={images.qr} />
